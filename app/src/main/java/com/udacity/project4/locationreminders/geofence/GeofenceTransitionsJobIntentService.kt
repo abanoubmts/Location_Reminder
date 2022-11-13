@@ -28,7 +28,7 @@ class GeofenceTransitionsJobIntentService : JobIntentService(), CoroutineScope {
     companion object {
         //  private const val JOB_ID = 573
 
-        //        Done: call this to start the JobIntentService to handle the geofencing transition events
+        //        TODO: call this to start the JobIntentService to handle the geofencing transition events
         fun enqueueWork(context: Context, intent: Intent) {
             enqueueWork(
                 context,
@@ -44,9 +44,9 @@ class GeofenceTransitionsJobIntentService : JobIntentService(), CoroutineScope {
 The BroadcastReceiver is implemented as follows on handle work
      */
     override fun onHandleWork(intent: Intent) {
-        //Done: handle the geofencing transition events and
+        //TODO: handle the geofencing transition events and
         // send a notification to the user when he enters the geofence area
-        //Done call @sendNotification
+        //TODO call @sendNotification
         if (intent.action == Constants.ACTION_GEOFENCE_EVENT) {
             val geofencingEvent =
                 GeofencingEvent.fromIntent(intent) // declare Event that inherit from intent
@@ -70,7 +70,7 @@ The BroadcastReceiver is implemented as follows on handle work
 remindersLocalRepository.getReminder(requestId)
 - declare remindersLocalRepository to call get reminder
      */
-    //Done: get the request id of the current geofence
+    //TODO: get the request id of the current geofence
     private fun sendNotification(triggeringGeofences: List<Geofence>) {
         for (triggeringGeofence in triggeringGeofences) {
             val requestId = triggeringGeofence.requestId
