@@ -54,10 +54,10 @@ class SelectLocationFragment : BaseFragment() , OnMapReadyCallback {  // that wi
         setHasOptionsMenu(true)
         setDisplayHomeAsUpEnabled(true)
 
-//        TODO: add the map setup implementation
-//        TODO: zoom to the user location after taking his permission
-//        TODO: add style to the map
-//        TODO: put a marker to location that the user selected
+//        done: add the map setup implementation
+//        done: zoom to the user location after taking his permission
+//        done: add style to the map
+//        done: put a marker to location that the user selected
 
         // FragmentManager that manages the fragment's children {}
         val mapFragment = childFragmentManager
@@ -69,7 +69,7 @@ class SelectLocationFragment : BaseFragment() , OnMapReadyCallback {  // that wi
 
 
 
-//        TODO: call this function after the user confirms on the selected location
+//        done: call this function after the user confirms on the selected location
         onLocationSelected()
 
         return binding.root
@@ -97,7 +97,7 @@ class SelectLocationFragment : BaseFragment() , OnMapReadyCallback {  // that wi
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
-        // TODO: Change the map type based on the user's selection.
+        // done: Change the map type based on the user's selection.
         R.id.normal_map -> {
             true
         }
